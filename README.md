@@ -5,9 +5,13 @@ my attempt at Robert Nystroms book
 from the project root, compile all .java files into .class files
 ```
 cd /workspaces/crafting-interpreters
-javac lox/com/craftinginterpreters/lox/*.java
+javac -d out lox/com/craftinginterpreters/lox/*.java lox/com/craftinginterpreters/tool/*.java
 ```
 then run the Lox class
 ```
-java -cp lox com.craftinginterpreters.lox.Lox
-``
+java -cp out com.craftinginterpreters.lox.Lox
+```
+to run GenerateAst Class
+```
+java -cp out com.craftinginterpreters.tool.GenerateAst output_directory
+```
